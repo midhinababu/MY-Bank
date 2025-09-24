@@ -17,7 +17,7 @@ if(acno in localStorage){
 else{
     localStorage.setItem(acno,JSON.stringify(accountDeatils))
     alert("Registered successfully")
-    window.location="/login.html"
+    window.location="login.html"
 }
 const form = document.querySelector("form");
 form.addEventListener("submit", register);
@@ -32,7 +32,7 @@ function login(event){
     accountDeatils=JSON.parse(localStorage.getItem(acno));
     if(pswd==accountDeatils.pswd){
         alert("Login successful")
-        window.location='/home.html';
+        window.location='home.html';
     }else{
         alert("incorrect password")
     }
@@ -100,10 +100,10 @@ function withdrawdeposite(event){
 
 function logout(){
 localStorage.clear()
-window.location="./index.html"
+window.location="index.html"
 }
 
 
 document.getElementById('logbtn').addEventListener("onclick", () => {
-    window.location.href = "/login.html";
+    window.location.href = "login.html";
 });
