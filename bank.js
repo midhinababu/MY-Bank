@@ -62,7 +62,7 @@ function deposite(event){
             localStorage.setItem(acno,JSON.stringify(accountDetails))
             alert("your amount is successfully added")
            //balance amount show
-            document.getElementById().innerHTML=``
+            document.getElementById('currentBalance').innerHTML=`Current Balance : ${accountDetails.balance}`
         }
     }else{
         alert("Incorrect account number")
@@ -89,6 +89,7 @@ function withdrawdeposite(event){
             accountDeatils.balance-=witdraw;
             localStorage.setItem(acno,JSON.stringify(accountDeatils))
             alert("Your amount is successfully withdrawn. After withdrawal balance :"+accountDeatils.balance)
+            document.getElementById('currentBalance1').innerHTML=`Current Balance : ${accountDeatils.balance}`
         }
     }else{
         alert("Incorrect Password")
