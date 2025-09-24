@@ -102,3 +102,8 @@ function logout(){
 localStorage.clear()
 window.location="./index.html"
 }
+
+
+document.getElementById('logbtn').addEventListener("onclick", () => {
+    window.location.href = "/login.html";
+});
